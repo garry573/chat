@@ -1,0 +1,18 @@
+// Set up the input and output fields
+var inputField = document.getElementById("inputField");
+var outputField = document.getElementById("outputField");
+
+// Add an event listener for when the user submits the input field
+inputField.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        // Get the input text
+        var inputText = inputField.value;
+        
+        // Clear the input field
+        inputField.value = "";
+        
+        // Append the input text to the output field
+        outputField.innerHTML += "<br>" + inputText;
+    }
+});
